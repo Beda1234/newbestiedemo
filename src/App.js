@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+  
 
-function App() {
+const App = () => {
+  const [showWarning, setShowWarning] = useState(false);
+  const [noButtonStyle, setNoButtonStyle] = useState({});
+
+  const handleYesClick = () => {
+    setShowWarning(true);
+    toast.success("Thank you, Bandaar");
+  };
+
+  const handleNoHover = () => {
+    setNoButtonStyle({
+      position: "absolute",
+      top: Math.random() * 70 + 10 + "%",
+      left: Math.random() * 70 + 10 + "%",
+    });
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="title">Hii Bandar</h1>
+      <div className="image-container">
+        <img
+          src={process.env.PUBLIC_URL + '/good-times-and-crazy-friend-make-the-best-memories.gif'}
+          alt="Cute Dog"
+          className="dog-image"
+        />
+      </div>
+      <p className="question">Can we hangout sometime in Berhampur?</p>
+      <button className="yes-button" onClick={handleYesClick}>
+        Yes
+      </button>
+    
+      <button className="no-button" style={noButtonStyle} onMouseOver={handleNoHover}onTouchStart={handleNoHover}>
+        No
+      </button>
+      {/* {showWarning && (
+        <div className="warning">
+          <AiOutlineWarning size={30} />
+          <p>Thank you, Bandaar</p>
+        </div>
+      )} */}
+      <ToastContainer />
     </div>
   );
-}
+};
 
 export default App;
