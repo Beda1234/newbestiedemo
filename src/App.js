@@ -30,7 +30,7 @@ const App = () => {
           className="dog-image"
         />
       </div>
-      <p className="question">Can we hangout sometime in Berhampur?</p>
+      <p className="question">Lets enjoy and create some new memories </p>
       <button className="yes-button" onClick={handleYesClick}>
         Yes
       </button>
