@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/newbestiedemo/static/css/main.7d09f8e3.css",
+    "main.js": "/newbestiedemo/static/js/main.3a2492d3.js",
+    "static/js/787.75202cef.chunk.js": "/newbestiedemo/static/js/787.75202cef.chunk.js",
+    "index.html": "/newbestiedemo/index.html",
+    "main.7d09f8e3.css.map": "/newbestiedemo/static/css/main.7d09f8e3.css.map",
+    "main.3a2492d3.js.map": "/newbestiedemo/static/js/main.3a2492d3.js.map",
+    "787.75202cef.chunk.js.map": "/newbestiedemo/static/js/787.75202cef.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7d09f8e3.css",
+    "static/js/main.3a2492d3.js"
+  ]
+}
